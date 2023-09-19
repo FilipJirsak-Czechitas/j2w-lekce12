@@ -6,7 +6,11 @@ plugins {
 
 group = 'cz.czechitas.java2webapps'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+
+java {
+    sourceCompatibility = '17'
+}
+        
 
 repositories {
     mavenCentral()
