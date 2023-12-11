@@ -5,12 +5,11 @@ plugins {
 }
 
 group = 'cz.czechitas.java2webapps'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0'
 
 java {
     sourceCompatibility = '17'
 }
-        
 
 repositories {
     mavenCentral()
@@ -18,22 +17,23 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-jetty'
     implementation 'org.springframework.boot:spring-boot-starter-freemarker'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
-    modules {
-        module("org.springframework.boot:spring-boot-starter-tomcat") {
-            replacedBy("org.springframework.boot:spring-boot-starter-jetty", "Use Jetty instead of Tomcat")
-        }
-    }
 }
 
-tasks.named('test') {
+test {
     useJUnitPlatform()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }
 
 jar {
     enabled = false
 }
+
+compileJava.options.encoding = 'UTF-8'
