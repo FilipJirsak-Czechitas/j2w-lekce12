@@ -1,4 +1,4 @@
-package cz.czechitas.java2webapps.lekce12.contdown;
+package cz.czechitas.java2webapps.lekce12.countdown;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

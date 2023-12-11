@@ -1,11 +1,10 @@
-package cz.czechitas.java2webapps.lekce12.contdown;
+package cz.czechitas.java2webapps.lekce12.countdown;
 
 import org.springframework.stereotype.Service;
 
 import java.time.Clock;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalUnit;
 
 /**
  * @author Filip Jirsák
