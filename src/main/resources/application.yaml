@@ -1,0 +1,6 @@
+spring:
+  freemarker:
+    cache: false
+    settings:
+      auto_import: /_imports/common.ftlh as c
+      output_encoding: UTF-8
